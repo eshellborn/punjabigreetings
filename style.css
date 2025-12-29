@@ -83,3 +83,7 @@ main {
   margin-bottom: 12px;
   font-size: 0.9rem;
 }
+
+.phrase:not(:has(.speaker)), .speaker {
+  cursor: pointer;
+}
