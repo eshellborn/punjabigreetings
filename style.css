@@ -16,12 +16,12 @@ header {
   padding-bottom: 40px;
   color: #ffffff;
   line-height: 45px;
+  text-align: center;
 }
-
 header h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 600;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   margin-top: 0;
 }
 
@@ -62,7 +62,6 @@ main {
   font-size: 1rem;
   font-weight: 600;
 }
-
 .phrase p {
   font-size: 0.8rem;
   margin-bottom: 0;
