@@ -20,7 +20,7 @@ header {
 header h1 {
   font-size: 2.5rem;
   font-weight: 600;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
   margin-top: 0;
 }
 
@@ -39,7 +39,7 @@ main {
 .phrase {
   background: white;
   border-radius: 8px;
-  padding: 30px;
+  padding: 20px 25px;
   margin-bottom: 20px;
   box-shadow: 0 1px 4px rgba(0,0,0,0.1);
   position: relative;
@@ -47,18 +47,18 @@ main {
 
 .english {
   font-weight: 400;
-  font-size: 1.3rem;
+  font-size: 1rem;
   margin-bottom: 10px;
 }
 
-.gurmukhi {
-  font-size: 1.2rem;
+.phrase .gurmukhi {
+  font-size: 0.9rem;
   color: #039942;
   margin-bottom: 5px;
 }
 
-.phonetic {
-  font-size: 1.3rem;
+.phrase .phonetic {
+  font-size: 1rem;
   font-weight: 600;
 }
 .phrase p {
@@ -67,90 +67,12 @@ main {
 }
 .phrase .speaker {
   background-color: rgba(3, 153, 66, 0.15);
-  padding: 28px;
-  margin-top: 25px;
+  padding: 20px;
+  margin-top: 15px;
 }
 
 .phrase .speaker .speaker-name {
   text-transform: uppercase;
   margin-bottom: 12px;
-}
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-
-body {
-  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont,'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  background: #f5f5f5;
-  color: #333;
-  line-height: 1.6;
-  /* audio button and icon removed */
-  .phrase .speaker {
-    position: relative;
-  }
-}
-
-.gurmukhi {
-  font-size: 1.2rem;
-  color: #039942;
-  margin-bottom: 5px;
-}
-
-.phonetic {
-  font-size: 1.3rem;
-  font-weight: 600;
-}
-
-.phrase p {
-  font-size: 0.8rem;
-  margin-bottom: 0;
-}
-
-.phrase .speaker {
-  background-color: rgba(3, 153, 66, 0.15);
-  padding: 28px;
-  margin-top: 25px;
-}
-
-.phrase .speaker .speaker-name {
-  text-transform: uppercase;
-  margin-bottom: 12px;
-}
-.audio-btn {
-  position: absolute;
-  top: 50%;
-  right: 30px;
-  transform: translateY(-50%);
-  background: #039942;
-  border: none;
-  border-radius: 50%;
-  width: 44px;
-  height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: background-color 0.2s ease, transform 0.2s ease;
-}
-
-.phrase .speaker {
-  position: relative;
-}
-
-.speaker .audio-btn {
-  top: 50%;
-  right: 28px;
-  transform: translateY(-50%);
-}
-
-.audio-btn:hover {
-  background-color: #028335;
-}
-
-.audio-btn:active {
-  transform: scale(0.95);
-}
-
-.audio-icon {
-  width: 24px;
-  height: 24px;
-  color: white;
+  font-size: 0.9rem;
 }
