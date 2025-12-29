@@ -27,5 +27,13 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function onPhraseClick(index) {
-  alert(index);
+  const audio = document.getElementById(`audio${index}`);
+
+  if (!audio) {
+    //return; // no audio for this phrase
+    alert("no audio for this phrase");
+  }
+
+  audio.currentTime = 0; // restart if already playing
+  audio.play();
 }
