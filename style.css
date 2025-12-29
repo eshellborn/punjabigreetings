@@ -17,6 +17,7 @@ header {
   color: #ffffff;
   line-height: 45px;
 }
+
 header h1 {
   font-size: 2.5rem;
   font-weight: 600;
@@ -61,14 +62,20 @@ main {
   font-size: 1rem;
   font-weight: 600;
 }
+
 .phrase p {
   font-size: 0.8rem;
   margin-bottom: 0;
 }
+
 .phrase .speaker {
   background-color: rgba(3, 153, 66, 0.15);
   padding: 20px;
   margin-top: 15px;
+}
+
+.phrase .english + .speaker {
+  margin-top: 20px;
 }
 
 .phrase .speaker .speaker-name {
