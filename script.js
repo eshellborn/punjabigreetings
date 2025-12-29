@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         speaker.addEventListener("click", (e) => {
           e.stopPropagation(); // prevent bubbling to phrase
-          onPhraseClick(`${phraseNumber}.${suffix}`);
+          onPhraseClick(`${phraseNumber}${suffix}`);
         });
       });
     }
