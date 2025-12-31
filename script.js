@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const phrases = document.querySelectorAll(".phrase");
+  let currentAudio = null; // Keep track of the currently playing audio
 
   phrases.forEach((phrase, phraseIndex) => {
     const phraseNumber = phraseIndex + 1;
@@ -12,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         speaker.addEventListener("click", (e) => {
           e.stopPropagation(); // prevent bubbling to phrase
-          onPhraseClick(`${phraseNumber}${suffix}`);
+          playAudio(`${phraseNumber}${suffix}`);
         });
       });
     }
@@ -20,20 +21,27 @@ document.addEventListener("DOMContentLoaded", () => {
     // Phrase has no speakers → phrase itself is clickable
     else {
       phrase.addEventListener("click", () => {
-        onPhraseClick(String(phraseNumber));
+        playAudio(String(phraseNumber));
       });
     }
   });
-});
 
-function onPhraseClick(index) {
-  const audio = document.getElementById(`audio${index}`);
+  function playAudio(index) {
+    const audio = document.getElementById(`audio${index}`);
 
-  if (!audio) {
-    //return; // no audio for this phrase
-    alert("no audio for this phrase");
+    if (!audio) {
+      alert("no audio for this phrase");
+      return;
+    }
+
+    // Stop the previous audio if one is playing
+    if (currentAudio && currentAudio !== audio) {
+      currentAudio.pause();
+      currentAudio.currentTime = 0;
+    }
+
+    currentAudio = audio;
+    audio.currentTime = 0; // restart if already playing
+    audio.play();
   }
-
-  audio.currentTime = 0; // restart if already playing
-  audio.play();
-}
+});
